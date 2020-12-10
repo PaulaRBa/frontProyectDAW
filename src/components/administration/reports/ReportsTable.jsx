@@ -4,6 +4,7 @@ import { truncate } from "lodash";
 import config from "../../../config";
 
 function ReportsTable({ reports, setReports, credentials }) {
+  
   function deleteReport(id) {
     fetch(`${config.baseUrl}/reports/${id}`, {
       method: "DELETE",

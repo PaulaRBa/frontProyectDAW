@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 import config from "../../../config";
 
 function AddRole({ credentials }) {
+  
   const role = useState({ name: "" });
   const [completado, setCompletado] = useState(false);
   const [errors, setErrors] = useState({});

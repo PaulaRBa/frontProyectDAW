@@ -6,6 +6,7 @@ import "../../../styles/pagination.css";
 import config from "../../../config";
 
 function Posts({ credentials }) {
+
   const [posts, setPosts] = useState([]);
   const [page, setPage] = useState(0);
   const [pages, setPages] = useState(0);
@@ -13,7 +14,7 @@ function Posts({ credentials }) {
   //Llamada al servicio
   useEffect(() => {
     fetch(`${config.baseUrl}/posts?page=${page}`, {
-      headers: { Authorization: credentials.header },
+      headers: { 'Authorization': credentials.header },
     })
       .then((response) => response.json())
       .then((postsPage) => {

@@ -3,11 +3,11 @@ import { Jumbotron, Container, Button, Image } from "react-bootstrap";
 import CommentCard from "./CommentCard";
 import AddComment from "./AddComment";
 import { heart } from "../../images/indexImages";
-//import icon_heart from '../../images/icon_heart.png';
 import "../../styles/blog.css";
 import config from "../../config";
 
 function Post({ match, comment, credentials }) {
+
   const [post, setPost] = useState({
     title: "",
     categoryName: "",
@@ -65,17 +65,13 @@ function Post({ match, comment, credentials }) {
           <div className="col-md-3">
             <h6 className="changeText">
               {credentials.isLogged ? (
-                <Fragment>
-                  {post.punctuaction}{" "}
-                  <Button className="likes" variant="link">
-                    {" "}
-                    Likes{" "}
-                  </Button>{" "}
-                  <Image src={heart} />{" "}
+                <Fragment>{post.punctuaction}
+                  <Button className="likes" variant="link"> Likes </Button>
+                  <Image src={heart} />
                 </Fragment>
               ) : (
                 <p>{post.punctuaction} Likes</p>
-              )}{" "}
+              )}
             </h6>
           </div>
         </div>
@@ -90,8 +86,7 @@ function Post({ match, comment, credentials }) {
           />
         </div>
       </Container>
-      <br />
-      <br />
+      <br /><br />
       <Container id="commentsPost">
         <div className="row">
           <h5 className="changeText">COMENTARIOS: </h5>
@@ -105,8 +100,7 @@ function Post({ match, comment, credentials }) {
           />
         ))}
       </Container>
-      <br />
-      <br />
+      <br /><br />
       <Container id="addComments">
         <div className="row">
           <h5 className="changeText">Dejanos tu Comentario:</h5>

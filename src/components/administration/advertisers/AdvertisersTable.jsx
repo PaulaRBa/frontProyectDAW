@@ -5,6 +5,7 @@ import "./../../../styles/administration.css";
 import config from "../../../config";
 
 function AdvertisersTable({ advertisers, setAdvertisers, credentials }) {
+  
   function deleteAdvertiser(id) {
     fetch(`${config.baseUrl}/advertisers/${id}`, {
       method: "DELETE",

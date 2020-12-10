@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import config from "../../../../config";
 
 function Events() {
+  
   const [posts, setPosts] = useState([]);
-  //const[page, setPage] = useState(0);
   const page = 0;
 
   useEffect(() => {

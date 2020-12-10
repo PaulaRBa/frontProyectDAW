@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, Image } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function CommentCard({ comment, credentials }) {
-    console.log(credentials);
+
     return (
         <Card className="commentCard">
             <Card.Body className="commentCard">

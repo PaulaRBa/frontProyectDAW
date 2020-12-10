@@ -8,18 +8,15 @@ import "../../../styles/pagination.css";
 import config from "../../../config";
 
 function Roles({ credentials }) {
+  
   const [roles, setRoles] = useState([]);
   const [page, setPage] = useState(0);
   const [pages, setPages] = useState(0);
 
-  const alias = "Paula";
-  const password = "123456789";
-
   useEffect(() => {
     fetch(`${config.baseUrl}/roles?page=${page}`, {
       headers: {
-        Authorization: `BASIC ${btoa(alias + ":" + password)}`,
-        //"Authorization": credentials.header,
+        'Authorization': credentials.header,
       },
     })
       .then((response) => {
@@ -33,7 +30,7 @@ function Roles({ credentials }) {
         setRoles(rolesPage.content);
         setPages(rolesPage.totalPages);
       });
-  }, [setRoles, page]);
+  }, [setRoles, page, credentials]);
 
   if (credentials.role === "ADMIN") {
     return (

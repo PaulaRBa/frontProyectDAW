@@ -5,6 +5,7 @@ import BottomNavItemsList from "./BottomNavItemsList";
 import config from "../../../config";
 
 function BottomNav({ history }) {
+
   const [categories, setCategories] = useState([]);
   const [query, setQuery] = useState("");
 
@@ -16,6 +17,7 @@ function BottomNav({ history }) {
       });
   }, [setCategories]);
 
+  
   return (
     <Navbar className="bottomNav" expand="lg" variant="dark">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

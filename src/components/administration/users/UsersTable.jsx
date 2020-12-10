@@ -1,16 +1,14 @@
 import React from "react";
 import { Table, Button, Image } from "react-bootstrap";
 import { photo } from "../../../images/indexImages";
-
-//import icon_image from "../../../images/icon_image.png";
-
 import config from "../../../config";
 
 function UsersTable({ users, setUsers, credentials }) {
+
   function deleteUser(id) {
     fetch(`${config.baseUrl}/users/${id}`, {
       method: "DELETE",
-      headers: { Authorization: credentials.header },
+      headers: { 'Authorization': credentials.header },
     }).then((response) => {
       if (response.ok) {
         setUsers(users.filter((user) => user.id !== id));

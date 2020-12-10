@@ -13,7 +13,7 @@ function Categories({ credentials }) {
 
   useEffect(() => {
     fetch(`${config.baseUrl}/categories?page=${page}`, {
-      headers: { Authorization: credentials.header },
+      headers: { 'Authorization': credentials.header },
     })
       .then((response) => response.json())
       .then((categoriesPage) => {

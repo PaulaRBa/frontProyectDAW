@@ -2,12 +2,9 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
 import { keyBy } from "lodash";
-import MyEditor from "../funcionalities/myEditor/MyEditor";
-import "../funcionalities/myEditor/myEditor.css";
 import config from "../../config";
 
 function AddPost({ credentials }) {
-  console.log(credentials);
 
   const [post, setPost] = useState({
     title: "",

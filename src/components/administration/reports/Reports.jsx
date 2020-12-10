@@ -10,14 +10,10 @@ function Reports({ credentials }) {
   const [page, setPage] = useState(0);
   const [pages, setPages] = useState(0);
 
-  const alias = "Paula";
-  const password = "123456789";
-
   useEffect(() => {
     fetch(`${config.baseUrl}/reports?page=${page}`, {
       headers: {
-        Authorization: `BASIC ${btoa(alias + ":" + password)}`,
-        //'Authorization': credentials.header
+        'Authorization': credentials.header
       },
     })
       .then((response) => {
@@ -31,7 +27,7 @@ function Reports({ credentials }) {
         setReports(reportsPage.content);
         setPages(reportsPage.totalPages);
       });
-  }, [setReports, page]);
+  }, [setReports, page, credentials]);
 
   if (credentials.role === "ADMIN") {
     return (

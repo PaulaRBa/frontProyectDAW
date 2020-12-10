@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import config from "../../config";
 
 function Login({ setCredentials, credentials }) {
+
   const [user, loginUser] = useState({
     alias: "",
     password: "",
@@ -16,6 +17,7 @@ function Login({ setCredentials, credentials }) {
       [e.target.name]: e.target.value,
     });
   };
+  
   //Función que se ejecuta cuando el usuario quiere loguearse
   const onSubmit = async (e) => {
     e.preventDefault();

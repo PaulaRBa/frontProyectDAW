@@ -14,9 +14,6 @@ function Advertisers({ credentials }) {
   const [page, setPage] = useState(0);
   const [pages, setPages] = useState(0);
 
-  //const alias = 'Paula';
-  //const password = '123456789';
-
   useEffect(() => {
     fetch(`${config.baseUrl}/advertisers?page=${page}`, {
       headers: {

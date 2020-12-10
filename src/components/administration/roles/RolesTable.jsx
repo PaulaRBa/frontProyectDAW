@@ -7,7 +7,7 @@ function RolesTable({ roles, setRoles, credentials }) {
   function deleteRole(id) {
     fetch(`${config.baseUrl}/roles/${id}`, {
       method: "DELETE",
-      headers: { Authorization: credentials.header },
+      headers: { 'Authorization': credentials.header },
     }).then((response) => {
       if (response.ok) {
         setRoles(roles.filter((r) => r.id !== id));

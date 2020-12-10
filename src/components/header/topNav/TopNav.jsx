@@ -29,7 +29,6 @@ function TopNav({ credentials }) {
             ? <Link className="nav-item nav-link" to={"/login"} >LOGIN</Link>
             : <Link className="nav-item nav-link" to={"/logout"} >LOGOUT</Link>
           }
-          
         </Nav>
       </Navbar.Collapse>
     </Navbar>

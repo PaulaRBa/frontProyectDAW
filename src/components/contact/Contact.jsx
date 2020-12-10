@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
 import { Form, Button, Image } from "react-bootstrap";
-//import icon_phone from "../../images/icon_phone.png";
-//import icon_email from "../../images/icon_email.png";
 import { iphone, mail } from "../../images/indexImages";
 
 function Contact() {

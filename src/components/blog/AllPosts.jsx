@@ -7,7 +7,6 @@ import { useLocation } from "react-router-dom";
 import config from "../../config";
 
 function AllPosts({ credentials }) {
-  console.log(credentials);
 
   const location = useLocation();
 

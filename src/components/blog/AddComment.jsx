@@ -4,7 +4,6 @@ import { keyBy } from "lodash";
 import config from "../../config";
 
 function AddComment({ postId, addComment, credentials }) {
-  console.log(credentials);
 
   const [comment, setComment] = useState({
     content: "",

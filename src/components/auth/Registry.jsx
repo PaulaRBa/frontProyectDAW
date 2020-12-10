@@ -5,6 +5,7 @@ import { keyBy } from "lodash";
 import config from "../../config";
 
 function Registry() {
+  
   const [user, saveUser] = useState({
     name: "",
     surnames: "",

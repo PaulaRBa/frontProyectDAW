@@ -6,6 +6,7 @@ import "./../../styles/blog.css";
 import config from "../../config";
 
 function ReportForm({ match, credentials }) {
+  
   const [report, setReport] = useState({
     text: "",
     userAlias: credentials.alias,
@@ -27,7 +28,7 @@ function ReportForm({ match, credentials }) {
       body: JSON.stringify(report),
       headers: {
         "Content-type": "application/json",
-        Authorization: credentials.header,
+        'Authorization': credentials.header,
       },
     });
     let data = await response.json();
@@ -42,10 +43,6 @@ function ReportForm({ match, credentials }) {
   };
 
   if (completado) {
-    /*ERROR
-        ME COGE LA ID DE LA DENUNCIA, NO LA DEL POST
-        ASÍ QUE NO VA AL POST QUE TIENE QUE IR  ???????????????*/
-
     return <Redirect to={`/post/${match.params.id}`} />;
   } else {
     return (

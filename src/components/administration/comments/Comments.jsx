@@ -6,13 +6,14 @@ import "../../../styles/pagination.css";
 import config from "../../../config";
 
 function Comments({ credentials }) {
+  
   const [comments, setComments] = useState([]);
   const [page, setPage] = useState(0);
   const [pages, setPages] = useState(0);
 
   useEffect(() => {
     fetch(`${config.baseUrl}/comments?page=${page}`, {
-      headers: { Authorization: credentials.header },
+      headers: { 'Authorization': credentials.header },
     })
       .then((response) => response.json())
       .then((commentsPage) => {

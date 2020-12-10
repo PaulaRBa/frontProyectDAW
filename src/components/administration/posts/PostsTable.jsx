@@ -4,8 +4,6 @@ import { truncate } from "lodash";
 import { photo } from "../../../images/indexImages";
 import config from "../../../config";
 
-//import icon_image from "../../../images/icon_image.png";
-
 function PostsTable({ posts, setPosts, credentials }) {
   function deletePost(id) {
     fetch(`${config.baseUrl}/posts/${id}`, {

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import TopNav from './../components/header/topNav/TopNav';
 import BottomNav from './../components/header/bottomNav/BottomNav';
 import { ocio } from "../images/indexImages";
-//import ocio_asturias from './../images/ocio_asturias.jpg';
 import './../styles/header.css';
 
 function Header({ children, titleWeb, credentials }) {

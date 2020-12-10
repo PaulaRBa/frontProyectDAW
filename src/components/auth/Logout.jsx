@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom';
 function Logout({ credentials }) {
 
     const onSubmit = {}
+    
     if (credentials.isLogged) {
         return (
             <Fragment>

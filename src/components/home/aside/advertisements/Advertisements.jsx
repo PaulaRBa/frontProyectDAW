@@ -1,6 +1,7 @@
 import React from "react";
 
 function Advertisements() {
+  
   return (
     <div className="asideContent row">
       <div className="asideContent col-md-12">

@@ -19,7 +19,7 @@ function AddAdvertiser({ credentials }) {
       body: JSON.stringify(value),
       headers: {
         "Content-type": "application/json",
-        Authorization: credentials.header,
+        'Authorization': credentials.header,
       },
     });
     let data = await response.json();

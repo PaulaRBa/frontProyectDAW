@@ -70,7 +70,7 @@ function RouteUserProfileLayout({ component: Component, credentials, ...resto })
 }
 
 function RouteHeader({ component: Component, credentials, ...resto }) {
-  console.log(credentials);
+  //console.log(credentials);
   return (
     <Route
       {...resto}
@@ -84,7 +84,7 @@ function RouteHeader({ component: Component, credentials, ...resto }) {
 }
 
 function RouteHeaderAdmin({ component: Component, credentials, ...resto }) {
-  console.log(credentials);
+  //console.log(credentials);
   return (
     <Route
       {...resto}

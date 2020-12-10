@@ -3,6 +3,7 @@ import PostCard from "../../blog/PostCard";
 import config from "../../../config";
 
 function PostsContainer({ credentials }) {
+  
   const [posts, setPosts] = useState([]);
   //const[page, setPage] = useState(0);
   const page = 0;
